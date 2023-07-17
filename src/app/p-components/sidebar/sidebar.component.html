@@ -1,0 +1,77 @@
+<div class=" bg-light sidebar">
+        <div class="d-flex flex-column align-items-start align-items-sm-start px-3 pt-2 text-white min-vh-70">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start" id="menu">
+                <li>
+                    <a href="javascript:;" data-bs-toggle="collapse" class="nav-link px-0 submenu">
+                        <span class="ms-1 d-inline d-sm-inline">Color</span> </a>
+                    <ul class="collapse show nav flex-column ms-1" id="color" data-bs-parent="#menu">
+                        <li class="w-100">
+                            <section class="section">
+                                <mat-checkbox #red (change)="onChange(red)" value='color,red' class="margin">Red</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #blue (change)="onChange(blue)" value='color,blue' class="margin">Blue</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #green (change)="onChange(green)" value="color,greed" class="margin">Green</mat-checkbox>
+                            </section>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="nav-link px-0 submenu">
+                        <span class="ms-1 d-inline d-sm-inline">Gender</span> </a>
+                    <ul class="collapse show nav flex-column ms-1" id="gender" data-bs-parent="#menu">
+                        <li class="w-100">
+                            <section class="section">
+                                <mat-checkbox #men (change)="onChange(men)" value="gender,men" class="margin">Men</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #women (change)="onChange(women)" value="gender,women" class="margin">Women</mat-checkbox>
+                            </section>
+                        </li>
+
+                    </ul>
+                 </li>
+
+                 <li>
+                    <a href="javascript:;" class="nav-link px-0 submenu">
+                         <span class="ms-1 d-inline d-sm-inline">Price</span> </a>
+                    <ul class="collapse show nav flex-column ms-1" id="price" data-bs-parent="#menu">
+                        <li class="w-100">
+                            <section class="section">
+                                <mat-checkbox #min (change)="onChange(min)" value="price,0-240" class="margin">0-Rs240</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #average (change)="onChange(average)" value="price,251-450" class="margin">Rs251-450</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #max (change)="onChange(max)" value="price,450" class="margin">Rs450</mat-checkbox>
+                            </section>
+                        </li>
+
+                    </ul>
+                 </li>
+
+                 <li>
+                    <a href="javascript:;" class="nav-link px-0 submenu">
+                        <span class="ms-1 d-inline d-sm-inline">Type</span> </a>
+                    <ul class="collapse show nav flex-column ms-1" id="type" data-bs-parent="#menu">
+                        <li class="w-100">
+                            <section class="section">
+                                <mat-checkbox #polo (change)="onChange(polo)" value="type,polo" class="margin">Polo</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #hoodie (change)="onChange(hoodie)" value="type,hoodie" class="margin">Hoodie</mat-checkbox>
+                            </section>
+                            <section class="section">
+                                <mat-checkbox #basic (change)="onChange(basic)" value="type,basic" class="margin">Basic</mat-checkbox>
+                            </section>
+                        </li>
+
+                    </ul>
+                 </li>
+            </ul>
+            <hr>
+        </div>
+</div>

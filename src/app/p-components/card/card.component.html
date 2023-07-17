@@ -1,0 +1,13 @@
+<mat-card class="card">
+    <img mat-card-image [src]="url" width="150" height="150" alt="Image of product">
+    <mat-card-content>
+        <div class="row content">
+            <span class="price">
+                {{currency}}. {{price}}/-
+            </span>
+            <span class="add-to-cart">
+                <button mat-flat-button color="primary" class="bg-dark" (click)="addToCartClicked()">Add to  cart</button>
+            </span>
+        </div>
+    </mat-card-content>
+  </mat-card>

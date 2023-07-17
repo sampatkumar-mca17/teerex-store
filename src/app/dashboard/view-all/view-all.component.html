@@ -1,0 +1,35 @@
+
+<div class="view-container">
+    <div class="searchbar">
+        <div></div>
+        <div >
+            <div class="search-textbox">
+                <app-search-bar (search)="onSearch($event)"></app-search-bar>
+            </div>
+            <div class="search-textbox filter">
+                <button mat-button [matMenuTriggerFor]="menu" [draggable]="true " #menuTrigger>
+                    <fa-icon [icon]="faFilter"></fa-icon>
+                </button>
+                <mat-menu #menu="matMenu" [hasBackdrop]="true">
+                    <app-sidebar (click)="$event.stopPropagation()" (filterApplied)="onFilterApplied($event)" ></app-sidebar>
+                </mat-menu>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    
+    <app-content-with-sidebar (filterApplied)="onFilterApplied($event)">
+        <app-paginator [disabled]="isPaginationDisabled" class="responsive" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (paginationUpdate)="onPaginationUpdate($event)"></app-paginator> 
+        <div class="row" >
+            <div *ngFor="let product of paginatedProducts" class="col-12 col-lg-4 col-md-6 col-sm-6">
+                <div class="app-card">
+                    <app-card    [id]="product.id" [url]="product.imageURL" [currency]="product.currency" [price]="product.price" (addToCart)="onAddToCart($event)"></app-card>
+                </div>
+            </div>
+        </div>  
+        
+    </app-content-with-sidebar>
+
+</div>
+
+

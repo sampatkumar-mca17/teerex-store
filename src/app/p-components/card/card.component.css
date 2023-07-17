@@ -1,0 +1,33 @@
+.card {
+  max-width: 270px;
+  background-color: #fff;
+  z-index: inherit;
+  padding: 30px;
+}
+
+.header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.content {
+  display: inline;
+}
+
+.content .price {
+  font-weight: bold;
+}
+
+.content .add-to-cart {
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .content {
+    display: block;
+    text-align: center;
+  }
+  .card {
+    min-width: 95vw;
+  }
+}/*# sourceMappingURL=card.component.css.map */

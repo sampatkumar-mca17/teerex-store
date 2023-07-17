@@ -1,0 +1,49 @@
+.view-container{
+    position:relative;
+    top:40px;
+    left:5%;
+    max-width: 90vw;
+}
+
+
+.app-card{
+    padding: 0  0 50px 0;
+}
+
+.searchbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items:grid-column-start;
+}
+
+.filter{
+    visibility: hidden;
+}
+
+.search-textbox{
+    display:inline-block;
+}
+
+@media (max-width:500px) {
+    .view-container{
+        position:relative;
+        width:100% !important;
+        left:0;
+        top:3rem;
+        
+    }
+    .app-card{
+        padding:0;
+        position: relative;
+        // bottom:13rem !important;
+    }
+    .searchbar{
+        display: inline;
+        position:relative;
+        left:0.8rem;
+    }
+    .filter{
+        visibility: visible;
+    }
+    
+}

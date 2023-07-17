@@ -1,0 +1,28 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  box-shadow: -1px 0px 10px 0px;
+  z-index: 9999;
+  max-height: 70vh;
+  width: 15vw;
+  min-width: 250px;
+  justify-content: left;
+  overflow-y: scroll;
+}
+
+.mainmenu, .submenu {
+  font-weight: bold;
+}
+
+.section {
+  margin: 12px 0;
+}
+
+.margin {
+  margin: 0 12px;
+  color: black;
+}/*# sourceMappingURL=sidebar.component.css.map */

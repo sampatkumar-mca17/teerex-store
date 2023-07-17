@@ -1,0 +1,36 @@
+.content-divider {
+  max-width: 90vw;
+  min-width: 40vw;
+  display: grid;
+  grid-template-columns: 300px 80%;
+}
+
+.sidebar {
+  position: relative;
+  top: 60px;
+}
+
+.content {
+  position: relative;
+  left: 4%;
+}
+
+@media (max-width: 500px) {
+  .content-divider {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+  .content {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+}
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}/*# sourceMappingURL=content-with-sidebar.component.css.map */

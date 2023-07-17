@@ -1,0 +1,41 @@
+<div class="row cart">
+   <div class="col-12 cart-title">
+      <h3>Shopping Cart</h3> 
+   </div>
+   <div *ngIf ="!filteredProducts.length" class="no-data">
+      <p>No data to show</p> 
+   </div>
+   <div *ngIf="filteredProducts.length" class="cart-items">
+      <div class="cart-item" *ngFor="let product of filteredProducts">
+         <div class="img img-responsive">
+            <img [src]="product.imageURL" alt="" height="60" width="60">
+         </div>
+         <div class="name-price">
+            <p>{{product.name}}</p>
+            <p>{{product.totalPrice}}</p>
+         </div>
+         <div class="quantity">
+            <p>
+               <mat-form-field appearance="fill">
+                  <mat-label>Quantity</mat-label>                  
+                  <mat-select (selectionChange)="onSelectionChange($event,product.id)" [value]="product.selectedQuantity">
+                    <mat-option *ngFor="let quantity of product.quantities;let i = index" [value]="i+1">{{i+1}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </p>
+         </div>
+         <div class="action">
+            <button mat-raised-button (click)="deleteCart(product)">delete</button>
+         </div>
+      </div>
+
+      <div class="footer">
+         <button mat-raised-button color="primary" (click)="onCheckOutAndPayment()">Checkout and Pay({{totalPrice}})</button>
+         <!-- <p class="mt-5">
+            Try it out using the test card number <b>4242 4242 4242 4242</b>, a random three-digit CVC number, any expiration date in the future, and a random five-digit U.S. ZIP code.
+        </p> -->  
+      </div>
+
+   </div>
+ 
+</div>

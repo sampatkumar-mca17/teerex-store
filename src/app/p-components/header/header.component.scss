@@ -1,0 +1,32 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+.navbar{
+    padding:3px 0 15px 0 !important;
+    background-color: $gray-200;
+}
+.navbar-nav .active{
+    font-size: bolder;
+    border-bottom: 2px dashed $gray-900;
+    & .nav-link{
+        color:$black;
+    }
+    
+}
+.navbar-brand,.navbar-nav .nav-item .nav-link {
+   
+    position:relative;
+    top:10px;
+}
+.navbar-nav .nav-item .nav-link
+{
+    font-size: 16px;
+}
+
+.cart{
+    font-size: 28px;
+}
+
+@media (max-width:500px){
+    .navbar-nav .active{
+        border-bottom: none;
+    }
+}

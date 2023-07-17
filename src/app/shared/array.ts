@@ -1,0 +1,1 @@
+export const convertToArray = (str, delimiter) => str.split(delimiter)
